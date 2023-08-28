@@ -50,11 +50,17 @@ namespace WFIG
                 newItem.objectName = newObjectName;
                 newItem.prefab = newObjectPrefab;
                 newItem.poolSize = newObjectPoolSize;
-
+                if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+                {
+                    AssetDatabase.CreateFolder("Assets", "Resources");
+                    AssetDatabase.SaveAssets();
+                    Debug.Log("Resources folder created");
+                }
                 if (!AssetDatabase.IsValidFolder("Assets/Resources/SimpleObjectPool"))
                 {
                     AssetDatabase.CreateFolder("Assets/Resources","SimpleObjectPool");
                     AssetDatabase.SaveAssets();
+                    Debug.Log("SimpleObjectPool folder created");
                 }
                 AssetDatabase.CreateAsset(newItem, "Assets/Resources/SimpleObjectPool/" + newObjectName + ".asset");
                 AssetDatabase.SaveAssets();

@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: ObjectPoolList
   m_EditorClassIdentifier: 
   ItemList:
-  - {fileID: 0}
   - {fileID: 11400000, guid: 79e4979cc34f6924b95df6471a649692, type: 2}

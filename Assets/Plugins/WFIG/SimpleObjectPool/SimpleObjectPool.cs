@@ -21,10 +21,13 @@ namespace WFIG
             }
 
             instance = this;
+            
+            
         }
 
         private void Start()
         {
+            DontDestroyOnLoad(this);
             InitializePools();
         }
 
